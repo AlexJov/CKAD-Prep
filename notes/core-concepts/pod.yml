@@ -1,0 +1,16 @@
+api-version: v1
+kind: Pod
+metadata:
+  name: my-app-pod
+  labels:
+    app: myapp
+    lang: dotnet
+    tier: front-end
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx
+      resources:
+        limits:
+          memory: "32Mi"
+          cpu: "0.2"
