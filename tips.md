@@ -35,9 +35,9 @@ Use ~/.bashrc:
 
     alias k=kubectl
     complete -F __start_kubectl k
-    alias kns=’k config set-context --current --namespace  ’
-    alias kgc='k get po -l x=y'
-    dr='--dry-run=client -o yaml'
+    alias kns=’k config set-context --current --namespace  ’ # SPACE!
+    alias kgc='k get po -l x=y' # false statement to return no resources, only to get namespace name
+    dr='--dry-run=client -o yaml' # no alias! use as variable!!! $dr
 
 Don’t forget to reload your terminal by typing 'source ~/.bashrc'
 ____

@@ -1,10 +1,9 @@
-# config maps
-k create cm my-cm --from-literal=KEY-my-value
-k create cm my-cm-2 --from-file=/my/file.txt
-
-# secrets
-k create secret generic my-secret --from-literal=PASS=supersecret --from-literal=PORT=8080
-
+'''
+Understand Deployments and how to perform rolling updates
+Understand Deployments and how to perform rollbacks
+Understand Jobs and CronJobs
+Understand how to use Labels, Selectors, and Annotations
+'''
 # labels
 k get po --show-labels
 k get po --selector env=dev

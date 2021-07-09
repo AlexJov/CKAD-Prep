@@ -18,6 +18,12 @@ https://github.com/cncf/curriculum/blob/master/CKAD_Curriculum_V1.21.pdf
 + https://www.katacoda.com/liptanbiswas/courses/ckad-practice-challenges
 + https://killer.sh/ckad
 
+https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552
+
++ 7 days before:
+LinuxAcademy
+https://acloudguru.com/?utm_source=legacyla&utm_medium=redirect&utm_campaign=one_platform
+
 (before exam)
 + lightning labs (Udemy)
 + 2 Mock Exams (Udemy)

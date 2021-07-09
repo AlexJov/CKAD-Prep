@@ -11,3 +11,4 @@ k config set-context myxontext --namespace=mynamespace
 # use explain
 ## describe all parameters
 k explain cronjob.spec. ... --recursive
+
