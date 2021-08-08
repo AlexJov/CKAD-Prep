@@ -7,6 +7,8 @@ metadata:
     lang: dotnet
     tier: front-end
 spec:
+  nodeSelector:
+    nodeName: nginxnode
   containers:
     - name: nginx-container
       image: nginx

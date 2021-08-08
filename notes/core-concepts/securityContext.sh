@@ -23,8 +23,17 @@ spec:
       runAsUser: 2000
       allowPrivilegeEscalation: false
 
+# capabilities
+securityContext:
+  runAsUser: 1000
+
 # get shell into running container
 kubectl exec -it security-context-demo -- sh
+
+// verify
+kubectl exec -it secbusybox -- sh
+id // it will show the id and group
+uid=1000 gid=2000
 
 # use grep
 k get po secure-pod -o yaml | grep runAs

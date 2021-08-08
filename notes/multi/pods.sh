@@ -20,6 +20,10 @@ args: ["$(MESSAGE)"]
 kubectl logs busybox -c busybox2 --previous
 kubectl exec busybox -c busybox3 -- ls
 
+# If pod crashed and restarted, get logs about the previous instance
+kubectl logs nginx -p
+
+
 kubectl top pod busybox --containers
 
 # exec into container

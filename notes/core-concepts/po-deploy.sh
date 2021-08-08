@@ -16,7 +16,7 @@ kubectl set image pod/nginx nginx=nginx:1.15-alpine
 kubeclt edit po nginx
 
 # Check the Image version without the describe command (?)
-kubectl get po nginx -o jsonpath='{.spec.containers[].image}{"\n"}'
+kubectl  -o jsonpath='{.spec.containers[].image}{"\n"}'
 
 # exec into the pod
 kubectl exec -it nginx /bin/sh
@@ -30,6 +30,9 @@ kubectl run busybox --image=busybox --restart=Never -- /bin/sh -c "sleep 3600"
 # CHECK CONNECTION of the nginx pod from the busybox pod
 kubectl get po nginx -o wide
 kubectl exec -it busybox -- wget -o- <IP Address>
+
+# create a busybox image and wget IP
+k run busybox --image=busybox --restart=Never --rm -it -- wget -O- 172.18.0.5
 
 # Create a busybox pod and echo message ‘How are you’ (+ case to remove it immediatelly)
 kubectl run busybox --image=nginx --restart=Never -it -- echo "How are you"
@@ -69,5 +72,13 @@ kubectl get pods -o wide
 ## force delete
 kubectl delete pods <pod> --grace-period=0 --force
 
+# NOTE:
+# Asign to a node:
+nodeSelector:
+  nodeName: my-nginx-node
 
+k describe po nginx | grep Node-Selectors
+
+# delete all 
+k delete po --all
 

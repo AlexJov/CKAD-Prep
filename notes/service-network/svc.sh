@@ -5,6 +5,7 @@ Demonstrate basic understanding of NetworkPolicies
 
 # sevice
 ## use pod's labels and selectors ["expose pod"]
+# EXPOSE command!
 k expose pod redis --port=6379 --name=redis-svc --dry-run=client -o yaml 
 
 ## create new (assume app=redis, you cannot pass selectors) - generate file and modify selectors before creating service
@@ -21,3 +22,14 @@ k create service nodeport nginx --tcp=80:80 --node-port=30080 --dry-run=client -
 ## NOTE: --name= of the newly created 
 ## k expose pod -h 
 kubectl expose pod ig-11 --name=greef --port=8080 --target-port=80
+
+
+# use busybox to hit a service
+k get svc my-svc -o wide
+## > get service IP
+# --restart=Never 
+# -it --rm
+## command is: "wget -o- IP-ADDRESS:SERVICE-PORT"
+k run busybox --image=busybox --restart=Never -it --rm -- wget -o- 10.96.124.106:80
+
+

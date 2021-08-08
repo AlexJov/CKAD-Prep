@@ -14,9 +14,11 @@ https://github.com/cncf/curriculum/blob/master/CKAD_Curriculum_V1.21.pdf
 
 # TODO (tests):
 
-+ https://github.com/dgkanatsios/CKAD-exercises/
-+ https://www.katacoda.com/liptanbiswas/courses/ckad-practice-challenges
-+ https://killer.sh/ckad
+https://github.com/dgkanatsios/CKAD-exercises/
+https://www.katacoda.com/liptanbiswas/courses/ckad-practice-challenges
+https://killer.sh/ckad
+
+Candidates who register for the Certified Kubernetes Administrator (CKA), Certified Kubernetes Application Developer (CKAD), and Certified Kubernetes Security Specialist (CKS) exams will have access to an exam simulator, provided by Killer.sh.  
 
 https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552
 
@@ -27,3 +29,5 @@ https://acloudguru.com/?utm_source=legacyla&utm_medium=redirect&utm_campaign=one
 (before exam)
 + lightning labs (Udemy)
 + 2 Mock Exams (Udemy)
+
+https://www.linkedin.com/pulse/how-i-got-ckad-certification-2021-3-weeks-abdelahad-satour

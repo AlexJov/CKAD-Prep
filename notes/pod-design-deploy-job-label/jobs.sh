@@ -13,7 +13,14 @@ k run nginx --image=nginx --restart=OnFailure --schedule="* * * *" [cronJob]
 # {replaced with}
 k create cronjob pi --image=perl --schedule="0/5 * * * ?"  -- perl -Mbignum=bpi -wle 'print bpi(2000)'
 
+# print date and string every minute
+kubectl create cronjob date-job --image=busybox --schedule="*/1 * * * *" -- bin/sh -c "date; echo Hello from kubernetes cluster"
+
+# node (js) version
+kubectl create job nodeversion --image=node -- node -v
+
 
 # get
-k get cronjobs.batch 
-k get jobs.batch 
+k get cronjob
+k get cj
+k get jobs 
